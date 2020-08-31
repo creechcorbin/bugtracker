@@ -1,0 +1,30 @@
+<h1>Bug Tracker</h1>
+<button><a href='/fileticket'>File Ticket</a></button>
+
+<h3>New Tickets:</h3>
+<ul>
+    {% for ticket in new_tickets %}
+        <a href='/ticket/{{ ticket.id }}'><li>{{ ticket }}</li></a>
+    {% endfor %}
+</ul>
+
+<h3>In Progress Tickets:</h3>
+<ul>
+    {% for ticket in in_progress_tickets %}
+        <a href='/ticket/{{ ticket.id }}'><li>{{ ticket }}</li></a>
+    {% endfor %}
+</ul>
+
+<h3>Done Tickets:</h3>
+<ul>
+    {% for ticket in done_tickets %}
+        <a href='/ticket/{{ ticket.id }}'><li>{{ ticket }}</li></a>
+    {% endfor %}
+</ul>
+
+<h3>Invalid Tickets:</h3>
+<ul>
+    {% for ticket in invalid_tickets %}
+        <a href='/ticket/{{ ticket.id }}'><li>{{ ticket }}</li></a>
+    {% endfor %}
+</ul>

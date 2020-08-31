@@ -1,0 +1,23 @@
+<h1>{{ ticket.title }}</h1>    
+<button><a href='/'>Home</a></button>
+<button><a href='/ticket/{{ticket.id}}/edit'>Edit</a></button> 
+
+{% if ticket.assigned_to %} 
+
+    <button><a href='/ticket/{{ticket.id}}/unclaim/'>Unclaim Ticket</a></button>
+    <button><a href='/ticket/{{ticket.id}}/complete/'>Complete Ticket</a></button>
+
+{% else %}
+
+    <button><a href='/ticket/{{ticket.id}}/claim/'>Claim Ticket</a></button>
+
+{% endif %}
+
+<button><a href='/ticket/{{ticket.id}}/invalid/'>Invalidate Ticket</a></button>
+
+<p>Description: {{ ticket.description }}</p>
+<p>Filer: <a href='/{{ ticket.filer }}/'>{{ ticket.filer }}</a></p>
+<p>Status: {{ ticket.status }}</p>
+<p>Assigned to: {{ ticket.assigned_to }}</p>
+<p>Completed by: {{ ticket.completed_by}}</p>
+<p>Date added: {{ ticket.time_created }}</p>
