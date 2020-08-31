@@ -1,0 +1,29 @@
+# Inspired by https://www.toptal.com/developers/gitignore/api/venv,linux,macos,django,python,visualstudiocode,pycharm
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+### VisualStudioCode ###
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history
+
+### macOS ###
+# General
+.DS_Store
